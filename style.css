@@ -1,0 +1,45 @@
+#game {
+    text-align: center;
+}
+
+#word-input {
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+#submit-word, #clear-input {
+    justify-content: center;
+    position: relative;
+    top: 20px;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 50px);
+    grid-template-rows: repeat(5, 50px);
+    gap: 15px;
+    justify-content: center;
+}
+
+#grid-container div {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgreen;
+    font-size: 28.8px;
+    font-weight: bold;
+    font-family: arial;
+    cursor: pointer;
+}
+
+#timer, #score {
+    font-size: 18px;
+    margin: 5px;
+}
+
+#word-list {
+    margin-top: 20px;
+}
