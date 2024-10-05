@@ -133,6 +133,8 @@ submitButton.addEventListener('click', async () => {
     const word = wordInput.value.trim().toUpperCase();
 
     // Check if the word is valid based on grid letters
+    if (selectedLetters.length > 3) {
+
     if (word && !wordsFound.includes(word) && validateWordFromGrid(word)) {
         const isValid = await validateWordViaAPI(word);
         if (isValid) {
@@ -151,6 +153,10 @@ submitButton.addEventListener('click', async () => {
         }
     } else {
         alert("Invalid word. You already have this word!");
+    }
+
+    } else {
+        alert("That is too short of a word!")
     }
 
     // Clear selected letters and reset
